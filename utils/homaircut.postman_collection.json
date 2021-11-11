@@ -1,0 +1,95 @@
+{
+	"info": {
+		"_postman_id": "eef946ab-1df2-4d2b-a849-88779623e37c",
+		"name": "homaircut",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "user signin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"password\": \"test\",\n    \"email\": \"mihai.crac\"\n}    ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/users/signin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"users",
+						"signin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "test token",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJ2RmVXRERrM05pbEtKNWdZWlJiVjFNNy1CVk9JM0ViSFhZTU9SaEN5eWt3In0.eyJleHAiOjE2MjkxMDg5MjksImlhdCI6MTYyOTEwNTMyOSwianRpIjoiYTljYzc3NjgtYTNlNi00NzcwLTkxYmQtMjE0YjFhMDkwODEwIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL2F1dGgvcmVhbG1zL2hvbWFpcmN1dC1yZWFsbSIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiJkOWI2YmU4Ny04NjhlLTQ4MmQtYTcyMC1mOTFmZjcyMmRmNDUiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJob21haXJjdXQtYXBwIiwic2Vzc2lvbl9zdGF0ZSI6ImMwNmE3ZWZmLTM3ZDUtNDcyZS05Y2M3LWM3MmU3NTIwYmU0NiIsImFjciI6IjEiLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsiZGVmYXVsdC1yb2xlcy1ob21lcmN1dCIsIm9mZmxpbmVfYWNjZXNzIiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6ImVtYWlsIHByb2ZpbGUiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsIm5hbWUiOiJmaXJzdE5hbWUxIGxhc3RuYW1lMSIsInByZWZlcnJlZF91c2VybmFtZSI6InVzZXJuYW1lMSIsImdpdmVuX25hbWUiOiJmaXJzdE5hbWUxIiwiZmFtaWx5X25hbWUiOiJsYXN0bmFtZTEiLCJlbWFpbCI6ImVtYWlsMSJ9.XXChzqzk6SJcbn7Xzvt4q1mw_d6jFLMqNqp7mHLRmzzlCVbZLRRffU4HPW8tX3EjijMGjcJUQNIeDeEQmpKBsY-_JbBjsevdzs9XSScbxPno7TPI_Xj2fZIwLmTsQwVpIEf1Y69rHPZtz6cAEYW0GnYjHXgb3KxKBjktezEtmZTSJybj_yUEYhwtBah2rCuhmndxnhteBKb-aEU3cS3HotrMkSu_lLQhL2aTIpTF3VubhPDh-Ujd9EeR-bjIS3hZLDtL9trqN_VNs2zdvBf_ex5arBBOONTk29oqcR4UnwAg0B7qGGM98L6g4O8c6szb9OOytNCtYAWeHp3_CPs0gg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/protected-data",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"protected-data"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"username1\",\n    \"firstName\": \"firstName1\",\n    \"lastName\": \"lastname1\",\n    \"password\": \"password\",\n    \"email\": \"email1\"\n}    ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

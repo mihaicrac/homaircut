@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: homaircut-service
+
+
+logging:
+  level:
+    org.springframework: DEBUG
+    org.keycloak: DEBUG
+
+
+keycloak.auth-server-url: http://localhost:8080/auth
+keycloak.realm: homaircut-realm
+keycloak.resource: homaircut-app
+keycloak.public-client: true
+keycloak.bearer-only: true
+
+
+server.port: 8081

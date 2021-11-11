@@ -1,0 +1,39 @@
+plugins {
+	id 'org.springframework.boot' version '2.4.9'
+	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	id 'java'
+}
+
+group = 'com.acs'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '8'
+
+repositories {
+	mavenCentral()
+}
+
+configurations {
+	compile.exclude module: "spring-boot-starter-tomcat"
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter'
+	implementation 'org.springframework.boot:spring-boot-starter-webflux'
+	implementation 'org.springframework.boot:spring-boot-starter-security'
+
+	implementation 'org.keycloak:keycloak-spring-boot-starter:13.0.1'
+	implementation 'org.keycloak:keycloak-admin-client:13.0.1'
+	implementation 'org.jboss.resteasy:resteasy-jaxrs:3.6.2.Final'
+	implementation 'org.jboss.resteasy:resteasy-client:3.6.2.Final'
+	implementation 'org.jboss.resteasy:resteasy-jackson-provider:3.6.2.Final'
+	implementation 'org.jboss.resteasy:resteasy-jackson2-provider:3.6.2.Final'
+
+	compileOnly 'org.projectlombok:lombok'
+	annotationProcessor 'org.projectlombok:lombok'
+
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+test {
+	useJUnitPlatform()
+}
